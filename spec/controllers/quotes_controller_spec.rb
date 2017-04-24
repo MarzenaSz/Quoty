@@ -7,4 +7,11 @@ RSpec.describe QuotesController, type: :controller do
       expect(response).to have_http_status(:success) # expects the response to have an http status code that's successful
     end
   end
+
+  describe "quotes#about action" do
+    it "should successfully load the about page" do
+      get :about
+      expect(response).to have_http_status(:success)
+    end
+  end
 end
