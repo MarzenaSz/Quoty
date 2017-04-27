@@ -40,6 +40,12 @@ RSpec.describe QuotesController, type: :controller do
       expect(quote.saying).to eq('Hello!')
       expect(quote.author).to eq('Matt V')
     end
+
+    it "should properly deal with a data that is not valid" do
+      post :create, params: { quote: { author: '', saying: ''} }
+      expect(flash[:error]).to be_present
+      expect(Quote.count).to eq 0
+    end
   end
 
 end
