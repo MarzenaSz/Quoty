@@ -51,7 +51,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-# Install rsepc - testing library
+# install rsepc - testing library
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
+# install Bootstrap
+gem 'bootstrap', '~> 4.0.0.alpha6'
+# instal SimpleForm gem
+gem 'simple_form'

@@ -1,0 +1,7 @@
+<h1> Create A New Quote </h1>
+
+<%= simple_form_for @quote do |f| %>
+  <%= f.input :author %>
+  <%= f.input :saying %>
+  <%= f.submit "Create!" %>
+<% end %>
